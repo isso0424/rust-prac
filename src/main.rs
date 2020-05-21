@@ -17,7 +17,7 @@ fn read_int() -> i32 {
     inputted.trim().parse().ok().unwrap()
 }
 
-fn read_sign<'a>() -> std::string::String {
+fn read_sign() -> std::string::String {
     let signs: Vec<std::string::String> = ["+", "-", "*", "/"]
         .iter()
         .map(|x| String::from(*x))
@@ -35,23 +35,23 @@ fn read_sign<'a>() -> std::string::String {
     }
 }
 
-fn add<'a>(x: &'a i32, y: &'a i32) -> i32 {
+fn add(x: &i32, y: &i32) -> i32 {
     *x + *y
 }
 
-fn sub<'a>(x: &'a i32, y: &'a i32) -> i32 {
+fn sub(x: &i32, y: &i32) -> i32 {
     *x - *y
 }
 
-fn multi<'a>(x: &'a i32, y: &'a i32) -> i32 {
+fn multi(x: &i32, y: &i32) -> i32 {
     *x * *y
 }
 
-fn div<'a>(x: &'a i32, y: &'a i32) -> i32 {
+fn div(x: &i32, y: &i32) -> i32 {
     *x / *y
 }
 
-fn calc<'a>(x: &'a i32, y: &'a i32) -> i32 {
+fn calc(x: &i32, y: &i32) -> i32 {
     let sign = read_sign();
     match sign.as_str() {
         "+" => add(x, y),
